@@ -1,0 +1,144 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@android:color/background_dark"
+    android:background="#FF000000">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:padding="16dp" />
+    <RelativeLayout
+        android:id="@+id/af_casing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:clipChildren="false" >
+
+        <com.anondev.gaurav.camerablur.FocusIndicatorView
+            android:id="@+id/af_indicator"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clipChildren="false"/>
+    </RelativeLayout>
+    <com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout
+        android:id="@+id/fabtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:containerId="@+id/fabtoolbar_container"
+        app:fabId="@+id/fabtoolbar_fab"
+        app:fabToolbarId="@+id/fabtoolbar_toolbar"
+        app:fadeInFraction="0.2"
+        app:hideDuration="200"
+        app:horizontalMargin="30dp"
+        app:showDuration="600"
+        app:verticalMargin="15dp">
+
+
+        <RelativeLayout
+            android:id="@+id/fabtoolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@id/fabtoolbar_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:backgroundTint="#A060FF60"
+                android:rotation="90"
+                android:src="@drawable/abc_ic_menu_overflow_material"
+                android:tint="#ffffff"
+                app:borderWidth="0dp"
+                app:elevation="0sp"
+                app:fabSize="mini" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/fabtoolbar_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                />
+
+            <ImageView
+                android:id="@+id/flash_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_flash_on_black_24dp" />
+
+            <ImageView
+                android:id="@+id/hide_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_clear_black_24dp" />
+
+
+        </LinearLayout>
+
+    </com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:gravity="bottom|end"
+            >
+
+
+
+
+
+
+
+
+
+                    <ImageButton
+
+                        android:id="@+id/Capture_Image"
+                        style="@style/Widget.AppCompat.Button.Small"
+                        android:layout_width="0dp"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_weight="1"
+                        android:src="@drawable/circle"
+                        android:scaleType="fitCenter"
+                        android:tint="@android:color/holo_green_dark"
+                        android:background="@color/no_color"
+                        android:elevation="5dp" />
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+    </FrameLayout>

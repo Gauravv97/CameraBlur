@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_item_background"
+    >
+
+
+        <!-- Need to wrap DragListView in another layout for
+            wrap_content to work for some reason -->
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.woxthebox.draglistview.DragListView
+                    android:id="@+id/drag_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                </com.woxthebox.draglistview.DragListView>
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+                    <TextView
+                        android:id="@+id/empty_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="casual"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="NO CONTENT FOUND"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+
+                </android.support.v4.widget.NestedScrollView>
+
+            </LinearLayout>
+
+</FrameLayout>

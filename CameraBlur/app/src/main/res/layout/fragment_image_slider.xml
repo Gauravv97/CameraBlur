@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/slider_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingRight="@dimen/item_offset"
+        android:background="@color/toolbar_backgroound_color"
+        >
+        <ImageButton
+            android:id="@+id/save_Item"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_check_black_24dp"
+            android:tint="@color/white"
+            android:background="@drawable/item_bg_menu"
+            android:contentDescription="Save Image"
+            />
+
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+</RelativeLayout>

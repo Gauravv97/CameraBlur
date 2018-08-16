@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.anondev.gaurav.camerablur"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support:preference-v7:27.1.0'
+    implementation 'com.android.support:exifinterface:27.1.0'
+    implementation 'com.android.support:design:27.1.0'
+    implementation 'com.android.support:support-compat:27.1.0'
+    implementation 'com.android.support:support-v4:27.1.0'
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.github.fafaldo:fab-toolbar:1.2.0'
+    implementation 'org.tensorflow:tensorflow-android:+'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.9.0'
+    implementation 'com.github.woxthebox:draglistview:1.6.0'
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:1.13.1'
+}
+
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io"
+        }
+    }
+}
