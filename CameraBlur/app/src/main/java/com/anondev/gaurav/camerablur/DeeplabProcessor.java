@@ -114,14 +114,11 @@ public class DeeplabProcessor {
 
         final long start = System.currentTimeMillis();
         sTFInterface.feed(INPUT_NAME, mFlatIntValues, 1, h, w, 3 );
-
         sTFInterface.run(new String[] { OUTPUT_NAME }, true);
-
         sTFInterface.fetch(OUTPUT_NAME, mOutputs);
-        final long end = System.currentTimeMillis();
 
-        Bitmap output = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
-        Bitmap blur=ImageUtils.fastblur(bitmap,1,5);
+
+
         double ar[]=new double[256];
         for (int y = 0; y < h; y++) {
             for (int x = 0; x < w; x++) {
@@ -131,9 +128,7 @@ public class DeeplabProcessor {
         }
         for (int y = h/2-10; y < h/2+10; y++) {
             for (int x = w/2-10; x < w/2+10; x++) {
-
-                ar[mOutputs[y * w + x]]=ar[mOutputs[y * w + x]]*1.1;
-
+                ar[mOutputs[y * w + x]]=ar[mOutputs[y * w + x]]*1.04;
             }
         }
         double max=0;
@@ -144,13 +139,85 @@ public class DeeplabProcessor {
                 maxi=i;
             }
         }
+        Bitmap output = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+        Bitmap blur=ImageUtils.fastblur(bitmap,7);
+        Bitmap softBlur=ImageUtils.fastblur(bitmap,4);
+
+        int imgMatrixEroded[][]=new int[w][h];
+        int imgMatrixDilated[][]=new int[w][h];
         for (int y = 0; y < h; y++) {
             for (int x = 0; x < w; x++) {
-                output.setPixel(x, y, mOutputs[y * w + x] == maxi ?  bitmap.getPixel(x,y):blur.getPixel(x,y));
+                imgMatrixEroded[x][y]=imgMatrixDilated[x][y]= (mOutputs[y * w + x]== maxi) ? 1:0;
+            }
+        }
+        imgMatrixDilated=dilate(imgMatrixDilated,1);
+        imgMatrixEroded=erode(imgMatrixEroded,2);
+        for (int y = 0; y < h; y++) {
+            for (int x = 0; x < w; x++) {
+                output.setPixel(x, y,imgMatrixDilated[x][y]==1 ?  (imgMatrixEroded[x][y]==1?bitmap.getPixel(x,y):softBlur.getPixel(x,y)):blur.getPixel(x,y));
             }
         }
 
         return output;
+    }
+    static int[][] dilate(int[][] image, int k){
+        image = RadialDist(image);
+        for (int i=0; i<image.length; i++){
+            for (int j=0; j<image[i].length; j++){
+                image[i][j] = ((image[i][j]<=k)?1:0);
+            }
+        }
+        return image;
+    }
+    static int[][] erode(int[][] image, int k){
+        for (int i=0; i<image.length; i++){
+            for (int j=0; j<image[i].length; j++){
+                image[i][j] = 1-image[i][j];
+            }
+        }
+        image = RadialDist(image);
+        for (int i=0; i<image.length; i++){
+            for (int j=0; j<image[i].length; j++){
+                image[i][j] = ((image[i][j]<=k)?1:0);
+            }
+        }
+        for (int i=0; i<image.length; i++){
+            for (int j=0; j<image[i].length; j++){
+                image[i][j] = 1-image[i][j];
+            }
+        }
+        return image;
+    }
+    static int[][] RadialDist(int[][] image){
+
+        for (int i=0; i<image.length; i++){
+            for (int j=0; j<image[i].length; j++){
+                if (image[i][j] == 1){
+                    // first pass and pixel was on, it gets a zero
+                    image[i][j] = 0;
+                } else {
+                    // pixel was off
+                    // It is at most the sum of the lengths of the array
+                    // away from a pixel that is on
+                    image[i][j] = image.length + image[i].length;
+                    // or one more than the pixel to the north
+                    if (i>0) image[i][j] = Math.min(image[i][j], image[i-1][j]+1);
+                    // or one more than the pixel to the west
+                    if (j>0) image[i][j] = Math.min(image[i][j], image[i][j-1]+1);
+                }
+            }
+        }
+        // traverse from bottom right to top left
+        for (int i=image.length-1; i>=0; i--){
+            for (int j=image[i].length-1; j>=0; j--){
+                // either what we had on the first pass
+                // or one more than the pixel to the south
+                if (i+1<image.length) image[i][j] = Math.min(image[i][j], image[i+1][j]+1);
+                // or one more than the pixel to the east
+                if (j+1<image[i].length) image[i][j] = Math.min(image[i][j], image[i][j+1]+1);
+            }
+        }
+        return image;
     }
 
     /*public static void printOp(Graph graph, String opName) {

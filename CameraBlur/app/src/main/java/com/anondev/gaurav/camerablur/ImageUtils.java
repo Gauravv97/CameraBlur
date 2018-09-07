@@ -84,11 +84,9 @@ public class ImageUtils {
 
         return inSampleSize;
     }
-    public static Bitmap fastblur(Bitmap sentBitmap, float scale, int radius) {
+    public static Bitmap fastblur(Bitmap sentBitmap, int radius) {
 
-        int width = Math.round(sentBitmap.getWidth() * scale);
-        int height = Math.round(sentBitmap.getHeight() * scale);
-        sentBitmap = Bitmap.createScaledBitmap(sentBitmap, width, height, false);
+        //sentBitmap = Bitmap.createScaledBitmap(sentBitmap, width, height, false);
 
         Bitmap bitmap = sentBitmap.copy(sentBitmap.getConfig(), true);
 
