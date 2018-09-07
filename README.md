@@ -43,7 +43,7 @@ to
 
 * Marcus Pinho, [Pexels](https://www.pexels.com/photo/woman-wearing-red-and-black-feather-hat-923345/)
 
-Sonnie Hiles, [unsplash](https://unsplash.com/photos/10wjs03JJv8)
+* Sonnie Hiles, [unsplash](https://unsplash.com/photos/10wjs03JJv8)
 
 ## About
 
