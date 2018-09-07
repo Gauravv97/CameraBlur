@@ -10,7 +10,7 @@ Will be uploaded soon.
 #### Some Samples
 
 <p align="center">
-    <img src="SampleImage/Image2.jpg" width=600><img src="SampleImage/Blurred2.jpg" width=600></br>
+    <img src="SampleImages/Image2.jpeg" width=300><img src="SampleImages/Blurred2.jpg" width=300></br>
     
 </p>
 
