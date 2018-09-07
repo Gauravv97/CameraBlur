@@ -7,11 +7,11 @@ A simple android app to implement Portrait mode using single sensor like in Pixe
 
 Download apk from [here](https://github.com/Gauravv97/Android-Portrait-Blur-using-DeeplabV3--Semantic-Image-Segmentation-/raw/master/apk/v0.0.2/CameraBlur%201025px.apk)
 
-#### Demo
+## Demo
 
 Will be uploaded soon.
 
-#### Some Samples
+## Some Samples
 
 <p align="center">
     <img src="SampleImages/Image1.jpg" width=300>   <img src="SampleImages/Blurred1.jpg" width=300></br>
