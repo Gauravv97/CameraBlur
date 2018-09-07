@@ -3,7 +3,7 @@ Android:Portrait Blur using DeeplabV3+ Semantic Image Segmentation
 
 A simple android app to implement Portrait mode using single sensor like in Pixel 2 (well not exactly exactly like Pixel 2's). This app allows you to either click image from your phone or select an image from storage and apply the blur. This app can run on ARM32 bit `ARM v7A` as well as ARM64 `ARMv8-A`.
 
-#### Downloads
+## Downloads
 
 Download apk from [here](https://github.com/Gauravv97/Android-Portrait-Blur-using-DeeplabV3--Semantic-Image-Segmentation-/raw/master/apk/v0.0.2/CameraBlur%201025px.apk)
 
