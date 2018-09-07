@@ -10,6 +10,7 @@ Will be uploaded soon.
 #### Some Samples
 
 <p align="center">
+    <img src="SampleImages/Image1.jpg" width=300>   <img src="SampleImages/Blurred1.jpg" width=300></br>
     <img src="SampleImages/Image2.jpeg" width=300>   <img src="SampleImages/Blurred2.jpg" width=300></br>
     
 </p>
@@ -41,6 +42,8 @@ to
 ## Photo Credits
 
 * Marcus Pinho, [Pexels](https://www.pexels.com/photo/woman-wearing-red-and-black-feather-hat-923345/)
+
+Sonnie Hiles, [unsplash](https://unsplash.com/photos/10wjs03JJv8)
 
 ## About
 
