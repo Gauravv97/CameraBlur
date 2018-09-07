@@ -35,6 +35,7 @@ From
 	public final static int INPUT_SIZE = 1025;
 
 to 
+
 	public final static int INPUT_SIZE = 1536; 
 
 
