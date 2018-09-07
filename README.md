@@ -10,7 +10,7 @@ Will be uploaded soon.
 #### Some Samples
 
 <p align="center">
-    <img src="SampleImage/Image2.jpg" width=600><img src="SampleImage/Blurred2.jpg" width=600></br>
+    <img src="SampleImages/Image2.jpeg" width=300>   <img src="SampleImages/Blurred2.jpg" width=300></br>
     
 </p>
 
@@ -25,7 +25,7 @@ Will be uploaded soon.
 
 I have 3 pre trained models of diffrent crop sizes `Default 1025 px`. You can use any one of them but with increased crop size the processing time also increases (by a lot), so use them as per your requirement. Crop size is the size of image that the input image will be resized to and sent for processing. The output dimensions are always less than crop size.
 
-For using 1536 px: Copy `InputSize 1536px\frozen_inference_graph.pb`and paste it in `ameraBlur\app\src\main\assets\`.
+For using 1536 px: Copy `InputSize 1536px\frozen_inference_graph.pb`and paste it in `CameraBlur\app\src\main\assets\`.
 
 Then change 
 `CameraBlur\app\src\main\java\com\anondev\gaurav\camerablur\DeeplabProcessor.java`line 28 
