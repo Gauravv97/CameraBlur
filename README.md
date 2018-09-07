@@ -38,6 +38,9 @@ to
 
 	public final static int INPUT_SIZE = 1536; 
 
+## Photo Credits
+
+* Marcus Pinho, [Pexels](https://www.pexels.com/photo/woman-wearing-red-and-black-feather-hat-923345/)
 
 ## About
 
