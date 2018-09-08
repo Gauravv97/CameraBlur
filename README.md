@@ -14,8 +14,8 @@ Download apk from [here](https://github.com/Gauravv97/Android-Portrait-Blur-usin
 ## Some Samples
 
 <p align="center">
-    <img src="SampleImages/Image1.jpg" width=300>   <img src="SampleImages/Blurred1.jpg" width=300></br>
-    <img src="SampleImages/Image2.jpeg" width=300>   <img src="SampleImages/Blurred2.jpg" width=300></br>
+    <img src="SampleImages/Image1.jpg" width="49%">   <img src="SampleImages/Blurred1.jpg" width="49%"></br>
+    <img src="SampleImages/Image2.jpeg" width="49%">   <img src="SampleImages/Blurred2.jpg" width="49%"></br>
     
 </p>
 
