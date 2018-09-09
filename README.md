@@ -42,6 +42,13 @@ From
 to 
 
 	public final static int INPUT_SIZE = 1536; 
+### External code
+
+This application wouldn't be possible without the great material produced by the community. I would like to give special thanks to the authors of essencial parts I've got on the internet and used in the code:
+
+* [Tensorflow's deeplab](https://github.com/tensorflow/models/tree/master/research/deeplab)
+* [dailystudio for implementing mobilenet model on TFMobile](https://github.com/dailystudio/ml/tree/master/deeplab)
+* [Stack Blur Algorithm by Mario Klingemann](quasimondo.com)
 
 ## Photo Credits
 
