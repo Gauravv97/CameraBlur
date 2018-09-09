@@ -42,12 +42,35 @@ From
 to 
 
 	public final static int INPUT_SIZE = 1536; 
-### External code
+## Attributions/Thanks/External code
 
 This application wouldn't be possible without the great material produced by the community. I would like to give special thanks to the authors of essencial parts I've got on the internet and used in the code:
 
+- DeepLabv3+:
+```
+@article{deeplabv3plus2018,
+  title={Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation},
+  author={Liang-Chieh Chen and Yukun Zhu and George Papandreou and Florian Schroff and Hartwig Adam},
+  journal={arXiv:1802.02611},
+  year={2018}
+}
+```
+
+- MobileNetv2:
+
+```
+@inproceedings{mobilenetv22018,
+  title={Inverted Residuals and Linear Bottlenecks: Mobile Networks for Classification, Detection and Segmentation},
+  author={Mark Sandler and Andrew Howard and Menglong Zhu and Andrey Zhmoginov and Liang-Chieh Chen},
+  booktitle={CVPR},
+  year={2018}
+}
+```
+
+
+
 * [Tensorflow's deeplab](https://github.com/tensorflow/models/tree/master/research/deeplab)
-* [dailystudio for implementing mobilenet model on TFMobile](https://github.com/dailystudio/ml/tree/master/deeplab)
+* A special thanks to [dailystudio for implementing mobilenet model on TFMobile](https://github.com/dailystudio/ml/tree/master/deeplab) without his help this project wouldn't have been sucessful. Also Without the advice given by [Liang-Chieh Chen](https://github.com/aquariusjay), we couldn't have successfully exported the model to mobile devices.
 * [Stack Blur Algorithm by Mario Klingemann](quasimondo.com)
 
 ## Photo Credits
