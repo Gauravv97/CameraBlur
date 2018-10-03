@@ -41,6 +41,12 @@ From
 to 
 
 	public final static int INPUT_SIZE = 1536; 
+
+## Todo
+
+* Use [Android RenderScript](https://developer.android.com/guide/topics/renderscript/compute) for blurring images(Soon).
+* Implement tensorflow lite (not possible until tensorflow can quantize deeplabv3 plus model).
+
 ## Attributions/Thanks/External code
 
 This application wouldn't have been possible without the great material produced by the community. I would like to give special thanks to the authors of essential parts I've got on the internet and used in the code.:
