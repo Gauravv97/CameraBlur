@@ -4,7 +4,7 @@ A simple android app to implement Portrait mode using a single sensor like in Pi
 
 ## Downloads
 
-Download apk from [here](https://github.com/Gauravv97/Android-Portrait-Blur-using-DeeplabV3--Semantic-Image-Segmentation-/raw/master/apk/v0.0.2/CameraBlur%201025px.apk)
+Download apk from [here](https://github.com/Gauravv97/CameraBlur/raw/master/apk/v0.0.3/CameraBlur%201025px.apk)
 
 ## Demo
 
