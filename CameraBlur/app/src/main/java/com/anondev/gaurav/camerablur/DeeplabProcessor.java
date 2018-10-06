@@ -28,9 +28,10 @@ public class DeeplabProcessor {
     public final static int INPUT_SIZE = 1025;
 
     private static TensorFlowInferenceInterface sTFInterface = null;
+    private static Context mContext;
 
     public synchronized static boolean initialize(Context context) {
-
+        mContext=context;
         final File graphPath = new File(MODEL_FILE);
 
         FileInputStream graphStream;
@@ -140,8 +141,8 @@ public class DeeplabProcessor {
             }
         }
         Bitmap output = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
-        Bitmap blur=ImageUtils.fastblur(bitmap,7);
-        Bitmap softBlur=ImageUtils.fastblur(bitmap,4);
+        Bitmap blur=ImageUtils.RenderBlur(mContext,bitmap,7);
+        Bitmap softBlur=ImageUtils.RenderBlur(mContext, bitmap,4);
 
         int imgMatrixEroded[][]=new int[w][h];
         int imgMatrixDilated[][]=new int[w][h];

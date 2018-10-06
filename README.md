@@ -44,8 +44,8 @@ to
 
 ## Todo
 
-* Use [Android RenderScript](https://developer.android.com/guide/topics/renderscript/compute) for blurring images(Soon).
-* Implement tensorflow lite (not possible until tensorflow can quantize deeplabv3 plus model).
+* [x] Use [Android RenderScript](https://developer.android.com/guide/topics/renderscript/compute) for blurring images(Soon).
+* [ ] Implement tensorflow lite (not possible until tensorflow can quantize deeplabv3 plus model).
 
 ## Attributions/Thanks/External code
 
