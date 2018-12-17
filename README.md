@@ -77,7 +77,7 @@ This application wouldn't have been possible without the great material produced
 
 * [Tensorflow's deeplab](https://github.com/tensorflow/models/tree/master/research/deeplab)
 * A special thanks to [dailystudio for implementing mobilenet model on TFMobile](https://github.com/dailystudio/ml/tree/master/deeplab) without his help this project wouldn't have been sucessful. Also Without the advice given by [Liang-Chieh Chen](https://github.com/aquariusjay), we couldn't have successfully exported the model to mobile devices.
-* [Stack Blur Algorithm by Mario Klingemann](http://quasimondo.com)
+
 
 ## Photo Credits
 
