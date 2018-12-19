@@ -4,7 +4,7 @@ A simple android app to implement Portrait mode using a single sensor like in Pi
 
 ## Downloads
 
-Download apk from [here](https://github.com/Gauravv97/CameraBlur/raw/master/apk/v0.0.3/CameraBlur%201025px.apk)
+Download apk from [here](https://github.com/Gauravv97/CameraBlur/raw/master/apk/v1.0.0/app-debug.apk)
 
 ## Demo
 
@@ -29,7 +29,7 @@ Download apk from [here](https://github.com/Gauravv97/CameraBlur/raw/master/apk/
 
 I have 3 pre-trained models of different crop sizes `Default 1025 px`. You can use any one of them but with increased crop size the processing time also increases (by a lot), so use them as per your requirement. Crop size is the size of the image that the input image will be resized to and sent for processing. The output dimensions are always less than crop size.
 
-For using 1536 px: Copy `InputSize 1536px\frozen_inference_graph.pb`and paste it in `CameraBlur\app\src\main\assets\`.
+For using 1537 px: Copy `InputSize 1537px\frozen_inference_graph.pb`and paste it in `CameraBlur\app\src\main\assets\`.
 
 Then change 
 `CameraBlur\app\src\main\java\com\anondev\gaurav\camerablur\DeeplabProcessor.java`line 28 
@@ -40,7 +40,16 @@ From
 
 to 
 
-	public final static int INPUT_SIZE = 1536; 
+	public final static int INPUT_SIZE = 1537; 
+
+## Changelog
+
+<b>v0.0.2</b>  Added SoftBlur around edges
+
+<b>v0.0.3</b>  Implemented blur using [Android RenderScript](https://developer.android.com/guide/topics/renderscript/compute)
+
+
+<b>v1.0.0</b>  Exported MobilenetV2 model with depth multiplier=0.5. Accuracy is slightly reduced but performance gain is extremely high.
 
 ## Todo
 
