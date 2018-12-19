@@ -26,7 +26,6 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,7 +49,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private class InitializeModelAsyncTask extends AsyncTask<Void, Void, Boolean> {
@@ -230,7 +228,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==OpenCamera.Req_for_Image&&resultCode==RESULT_OK){
             final Context context = getBaseContext();
-            Intent intent = new Intent(context, PotraitBlurService.class);
+            Intent intent = new Intent(context, PortraitBlurService.class);
             intent.putExtra("path",data.getStringExtra("path"));
             startService(intent);
             UpdateList();
@@ -242,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 final Context context = getBaseContext();
-                Intent intent = new Intent(context, PotraitBlurService.class);
+                Intent intent = new Intent(context, PortraitBlurService.class);
                 intent.putExtra("path",srcPath);
                 startService(intent);
                 UpdateList();

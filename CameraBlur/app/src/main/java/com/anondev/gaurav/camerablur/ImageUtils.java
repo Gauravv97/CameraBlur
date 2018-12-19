@@ -306,6 +306,66 @@ public class ImageUtils {
 
         return outputBitmap;
     }
+    static int[][] dilate(int[][] image, int k){
+        image = RadialDist(image);
+        for (int i=0; i<image.length; i++){
+            for (int j=0; j<image[i].length; j++){
+                image[i][j] = ((image[i][j]<=k)?1:0);
+            }
+        }
+        return image;
+    }
+    static int[][] erode(int[][] image, int k){
+        for (int i=0; i<image.length; i++){
+            for (int j=0; j<image[i].length; j++){
+                image[i][j] = 1-image[i][j];
+            }
+        }
+        image = RadialDist(image);
+        for (int i=0; i<image.length; i++){
+            for (int j=0; j<image[i].length; j++){
+                image[i][j] = ((image[i][j]<=k)?1:0);
+            }
+        }
+        for (int i=0; i<image.length; i++){
+            for (int j=0; j<image[i].length; j++){
+                image[i][j] = 1-image[i][j];
+            }
+        }
+        return image;
+    }
+    static int[][] RadialDist(int[][] image){
+
+        for (int i=0; i<image.length; i++){
+            for (int j=0; j<image[i].length; j++){
+                if (image[i][j] == 1){
+                    // first pass and pixel was on, it gets a zero
+                    image[i][j] = 0;
+                } else {
+                    // pixel was off
+                    // It is at most the sum of the lengths of the array
+                    // away from a pixel that is on
+                    image[i][j] = image.length + image[i].length;
+                    // or one more than the pixel to the north
+                    if (i>0) image[i][j] = Math.min(image[i][j], image[i-1][j]+1);
+                    // or one more than the pixel to the west
+                    if (j>0) image[i][j] = Math.min(image[i][j], image[i][j-1]+1);
+                }
+            }
+        }
+        // traverse from bottom right to top left
+        for (int i=image.length-1; i>=0; i--){
+            for (int j=image[i].length-1; j>=0; j--){
+                // either what we had on the first pass
+                // or one more than the pixel to the south
+                if (i+1<image.length) image[i][j] = Math.min(image[i][j], image[i+1][j]+1);
+                // or one more than the pixel to the east
+                if (j+1<image[i].length) image[i][j] = Math.min(image[i][j], image[i][j+1]+1);
+            }
+        }
+        return image;
+    }
+
 
 
 }

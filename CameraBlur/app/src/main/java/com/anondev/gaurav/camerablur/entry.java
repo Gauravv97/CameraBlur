@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class entry implements Serializable {
     int _id;
-    String path;
+    String path,map;
 
     public int get_id() {
         return _id;
@@ -20,5 +20,13 @@ public class entry implements Serializable {
 
     public void setPath(String path) {
         this.path = path;
+    }
+
+    public String getMap() {
+        return map;
+    }
+
+    public void setMap(String map) {
+        this.map = map;
     }
 }

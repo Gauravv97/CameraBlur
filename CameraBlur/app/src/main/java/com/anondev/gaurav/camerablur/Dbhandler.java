@@ -16,6 +16,7 @@ public class Dbhandler extends SQLiteOpenHelper{
     public static final String ID="_id";
 
     public static final String COLUMN1_NAME_TITLE_TABLE1 = "Path";
+    public static final String COLUMN2_NAME_TITLE_TABLE1 = "Map";
 
 
 
@@ -30,7 +31,8 @@ public class Dbhandler extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         String Query= "CREATE TABLE " + TABLE_NAME + " (" +
                 ID + " INTEGER ," +
-                COLUMN1_NAME_TITLE_TABLE1 +" TEXT);";
+                COLUMN1_NAME_TITLE_TABLE1 +" TEXT,"+
+                COLUMN2_NAME_TITLE_TABLE1 +" TEXT);";
         db.execSQL(Query);
 
 
@@ -49,6 +51,7 @@ public class Dbhandler extends SQLiteOpenHelper{
         ContentValues x=new ContentValues();
         x.put(ID,id);
         x.put(COLUMN1_NAME_TITLE_TABLE1,e.getPath());
+        x.put(COLUMN2_NAME_TITLE_TABLE1,e.getMap());
         db.insert(TABLE_NAME,null,x);
 
     }
@@ -65,7 +68,8 @@ public class Dbhandler extends SQLiteOpenHelper{
                 e.set_id(c.getInt(c.getColumnIndex(ID)));
             if(c.getString(c.getColumnIndex(COLUMN1_NAME_TITLE_TABLE1))!=null)
                 e.setPath(c.getString(c.getColumnIndex(COLUMN1_NAME_TITLE_TABLE1)));
-
+            if(c.getString(c.getColumnIndex(COLUMN2_NAME_TITLE_TABLE1))!=null)
+                e.setMap(c.getString(c.getColumnIndex(COLUMN2_NAME_TITLE_TABLE1)));
         }
 
         c.close();
