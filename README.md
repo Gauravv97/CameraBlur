@@ -54,7 +54,7 @@ to
 ## Todo
 
 * [x] Use [Android RenderScript](https://developer.android.com/guide/topics/renderscript/compute) for blurring images(Soon).
-* [ ] Will add feature to edit the depth of feild in the gallery by the end of this year ( don't know how  😂 but will definitely do it).
+* [ ] Will add feature to edit the depth of field in the gallery by the end of this year ( don't know how  😂 but will definitely do it).
 * [ ] Implement tensorflow lite (not possible until tensorflow can quantize deeplabv3 plus model).
 
 ## Attributions/Thanks/External code
