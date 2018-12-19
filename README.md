@@ -4,7 +4,7 @@ A simple android app to implement Portrait mode using a single sensor like in Pi
 
 ## Downloads
 
-Download apk from [here](https://github.com/Gauravv97/Android-Portrait-Blur-using-DeeplabV3--Semantic-Image-Segmentation-/raw/master/apk/v0.0.2/CameraBlur%201025px.apk)
+Download apk from [here](https://github.com/Gauravv97/CameraBlur/raw/master/apk/v0.0.3/CameraBlur%201025px.apk)
 
 ## Demo
 
@@ -45,6 +45,7 @@ to
 ## Todo
 
 * [x] Use [Android RenderScript](https://developer.android.com/guide/topics/renderscript/compute) for blurring images(Soon).
+* [ ] Will add feature to edit the depth of feild in the gallery by the end of this year ( don't know how  😂 but will definitely do it).
 * [ ] Implement tensorflow lite (not possible until tensorflow can quantize deeplabv3 plus model).
 
 ## Attributions/Thanks/External code
@@ -76,7 +77,7 @@ This application wouldn't have been possible without the great material produced
 
 * [Tensorflow's deeplab](https://github.com/tensorflow/models/tree/master/research/deeplab)
 * A special thanks to [dailystudio for implementing mobilenet model on TFMobile](https://github.com/dailystudio/ml/tree/master/deeplab) without his help this project wouldn't have been sucessful. Also Without the advice given by [Liang-Chieh Chen](https://github.com/aquariusjay), we couldn't have successfully exported the model to mobile devices.
-* [Stack Blur Algorithm by Mario Klingemann](http://quasimondo.com)
+
 
 ## Photo Credits
 
