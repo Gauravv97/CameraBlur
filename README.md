@@ -48,11 +48,6 @@ to
 
 <b>v1.0.0</b>  Exported MobilenetV2 model with depth multiplier=0.5([mobilenetv2_dm05_coco_voc_trainaug](http://download.tensorflow.org/models/deeplabv3_mnv2_dm05_pascal_trainaug_2018_10_01.tar.gz) ). Accuracy is slightly reduced but performance gain is extremely high.
 
-## Todo
-
-* [x] Use [Android RenderScript](https://developer.android.com/guide/topics/renderscript/compute) for blurring images(Soon).
-* [ ] To add a feature to edit the depth of field in the gallery.
-* [ ] Implement tensorflow lite (not possible until tensorflow can quantize deeplabv3 plus model).
 
 ## Attributions/Thanks/External code
 
