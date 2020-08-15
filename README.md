@@ -6,9 +6,6 @@ A simple android app to implement Portrait mode using a single sensor like in Pi
 
 Download apk from [here](https://github.com/Gauravv97/CameraBlur/raw/master/apk/v1.0.0/app-debug.apk)
 
-## Demo
-
-![Demo](SampleImages/Demo.gif)
 
 ## Some Samples
 
